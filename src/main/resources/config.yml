@@ -1,0 +1,71 @@
+#
+#  ███╗░░██╗██╗░██████╗░██╗░░██╗████████╗██████╗░██████╗░███████╗███████╗██╗██╗░░██╗███████╗░██████╗
+#  ████╗░██║██║██╔════╝░██║░░██║╚══██╔══╝██╔══██╗██╔══██╗██╔════╝██╔════╝██║╚██╗██╔╝██╔════╝██╔════╝
+#  ██╔██╗██║██║██║░░██╗░███████║░░░██║░░░██████╔╝██████╔╝█████╗░░█████╗░░██║░╚███╔╝░█████╗░░╚█████╗░
+#  ██║╚████║██║██║░░╚██╗██╔══██║░░░██║░░░██╔═══╝░██╔══██╗██╔══╝░░██╔══╝░░██║░██╔██╗░██╔══╝░░░╚═══██╗
+#  ██║░╚███║██║╚██████╔╝██║░░██║░░░██║░░░██║░░░░░██║░░██║███████╗██║░░░░░██║██╔╝╚██╗███████╗██████╔╝
+#  ╚═╝░░╚══╝╚═╝░╚═════╝░╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░░░░╚═╝░░╚═╝╚══════╝╚═╝░░░░░╚═╝╚═╝░░╚═╝╚══════╝╚═════╝░
+#
+#                 V 1.0.0    |    Author: MrDrag0nXYT (https://drakoshaslv.ru)
+#                  Source code: https://github.com/MrDrag0nXYT/NightPrefixes
+#
+
+
+
+# bStats metrics
+enable-metrics: true
+
+#
+# Database for storing custom join messages
+# Supports SQLITE
+#
+database:
+  type: SQLITE
+
+# Default prefix when not set
+default-prefix: ""
+
+# Max prefix length in symbols
+max-length: 32
+
+#
+# Messages
+#
+messages:
+  no-permission:
+    - "<#745c97>NightPrefixes <#c0c0c0>› <#fcfcfc>У вас <#d45079>недостаточно прав</#d45079> для выполнения этого действия!"
+
+  command:
+
+    blocked:
+      - "<#745c97>NightPrefixes <#c0c0c0>› <#fcfcfc>Вы успешно заблокировали игроку <#745c97>%player%</#745c97> возможность менять префикс!"
+
+    unblocked:
+      - "<#745c97>NightPrefixes <#c0c0c0>› <#fcfcfc>Вы успешно разблокировали игроку <#745c97>%player%</#745c97> возможность менять префикс!"
+
+    reload:
+      success:
+        - "<#745c97>NightPrefixes <#c0c0c0>› <#fcfcfc>Плагин <#ace1af>успешно перезагружен</#ace1af>"
+
+    usage:
+      - ""
+      - "<#745c97>NightPrefixes <#c0c0c0>› <#fcfcfc>Информация"
+#      - " <#c0c0c0>‣ <click:suggest_command:'/nightprefixes reload'><#745c97>/nightprefixes reload</click> <#c0c0c0>- <#fcfcfc>перезагрузить плагин"
+      - " <#c0c0c0>‣ <click:suggest_command:'/nightprefixes set'><#745c97>/nightprefixes set префикс</click> <#c0c0c0>- <#fcfcfc>установить префикс"
+      - " <#c0c0c0>‣ <click:suggest_command:'/nightprefixes reset'><#745c97>/nightprefixes reset</click> <#c0c0c0>- <#fcfcfc>сбросить префикс"
+      - ""
+
+    set:
+      - "<#745c97>NightPrefixes <#c0c0c0>› <#fcfcfc>Префикс <#745c97>%prefix%</#745c97> был установлен"
+
+    set-blocked:
+      - "<#745c97>NightPrefixes <#c0c0c0>› <#fcfcfc>Функция установки сообщения <#d45079>заблокирована за нарушение правил</#d45079>"
+
+    too-long:
+      - "<#745c97>NightPrefixes <#c0c0c0>› <#fcfcfc>Префикс <#d45079>слишком длинный</#d45079>! Максимально допустимая длина: <#745c97>%prefix_max_length% символа</#745c97>"
+
+    reset:
+      - "<#745c97>NightPrefixes <#c0c0c0>› <#fcfcfc>Префикс был сброшен"
+
+    admin-reset:
+      - "<#745c97>NightPrefixes <#c0c0c0>› <#fcfcfc>Префикс игрока <#745c97>%player%</#745c97> был сброшен"

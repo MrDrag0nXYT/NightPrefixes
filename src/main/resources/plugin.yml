@@ -1,0 +1,46 @@
+name: NightPrefixes
+version: '1.0.0'
+main: zxc.MrDrag0nXYT.nightPrefixes.NightPrefixes
+api-version: '1.18'
+authors: [ MrDrag0nXYT (drakoshaslv) ]
+website: https://drakoshaslv.ru
+depend: [PlaceholderAPI]
+
+commands:
+  nightprefixes:
+    aliases:
+      - nightprefix
+      - nprefix
+      - np
+      - prefix
+    usage: /<command>
+
+permissions:
+  nightprefixes.player.prefix.set:
+    default: false
+  nightprefixes.player.prefix.reset:
+    default: false
+
+  nightprefixes.admin.prefix.reset:
+    default: op
+  nightprefixes.admin.ban:
+    default: op
+  nightprefixes.admin.unban:
+    default: op
+  nightprefixes.admin.reload:
+    default: op
+
+  nightprefixes.admin.*:
+    default: op
+    children:
+      nightprefixes.admin.ban: true
+      nightprefixes.admin.unban: true
+      nightprefixes.admin.reload: true
+      nightprefixes.admin.prefix.reset: true
+
+  nightprefixes.player.*:
+    default: false
+    children:
+      nightprefixes.player.prefix.set: true
+      nightprefixes.player.prefix.reset: true
+
