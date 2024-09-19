@@ -43,6 +43,11 @@
 - **/nightprefixes reset** - Reset prefix
     - Permission: `nightprefixes.player.prefix.reset`
 
+# 💫 Placeholders
+
+#### %nightprefixes_prefix%
+Return player's prefix, if not set - string `default-prefix` from `config.yml`
+
 # 🌐 Translations (#todo)
 
 At the moment the plugin is available in Russian only
